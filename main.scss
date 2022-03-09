@@ -1,0 +1,126 @@
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background: white;
+}
+
+.page__header {
+  @include flexbox-center;
+  height: 80px;
+  width: 100%;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.034);
+
+  .header__logo {
+    font-family: "Shrikhand", cursive;
+    margin: 0;
+    color: black;
+    width: 40%;
+    margin-top: 10%;
+    padding-bottom: 3%;
+  }
+}
+
+.localisation {
+  @include flexbox-center;
+  background: rgba(128, 128, 128, 0.13);
+
+  &__city {
+    margin-left: 15px;
+    font-weight: 800;
+  }
+}
+
+.explorer {
+  width: 100%;
+
+  &__container {
+    padding: 20px;
+    height: 250px;
+    background: rgba(128, 128, 128, 0.075);
+  }
+
+  &__title {
+    margin: 0px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: large;
+    color: grey;
+  }
+
+  &__button {
+    background: $color-secondary;
+    color: white;
+    border-radius: 40px 40px 40px 40px;
+    padding: 3px 0px 1px 34px;
+    box-shadow: rgba(0, 0, 0, 0.082) 0px 4px 0px 0px;
+    margin: 0 34px 0 49px;
+    font-size: large;
+  }
+}
+
+.instruction {
+  width: 100%;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__title {
+    padding-left: 5%;
+  }
+
+  &__phases {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: black 50px 50px 50px 0;
+  }
+
+  &__phase {
+    display: flex;
+    align-items: center;
+    background: #f6f6f6;
+    height: auto;
+    width: auto;
+    margin: 7px 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+
+  &__number {
+    background-color: $color-primary;
+    color: white;
+    position: absolute;
+    padding: 3px 8px 3px 8px;
+    border-radius: 400px;
+    transform: translateX(-50%);
+  }
+
+  &__icon {
+    color: #888787;
+    margin: 0 30px;
+    font-size: 20px;
+  }
+
+  &__text {
+    padding: 7px 45px 0 0;
+    font-weight: bold;
+  }
+}
+
+.restaurants {
+}
