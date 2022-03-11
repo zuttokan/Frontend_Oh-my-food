@@ -75,10 +75,6 @@ body {
 .instruction {
   width: 100%;
 
-  &__container {
-    width: 100%;
-  }
-
   &__title {
     padding-left: 5%;
   }
@@ -97,7 +93,6 @@ body {
     height: 65px;
     margin: 7px 30px;
     border-radius: 20px;
-    position: relative;
 
     &:hover {
       background: #ff79d923;
@@ -132,66 +127,67 @@ body {
   width: 100%;
   margin-top: 30px;
   margin-bottom: 50px;
+  padding-top: 30px;
   background: rgba(155, 149, 149, 0.075);
-}
 
-.restaurant {
   &__title {
-    margin: 0;
+    padding-left: 5%;
   }
-  &__cards {
-    @include flexbox-center;
-    flex-direction: column;
-    border-radius: 15px;
-    justify-content: center;
-  }
-  &__card {
-    margin: 15px 0 0 0;
-    width: 350px;
-    height: 260px;
-    border-radius: 15px 15px 0 0;
-  }
-  &__card-img {
-    width: 100%;
-    height: 180px;
-    position: relative;
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+
+  .restaurant {
+    &__cards {
+      @include flexbox-center;
+      flex-direction: column;
+      border-radius: 15px;
+    }
+    &__card {
+      margin: 15px 0 0 0;
+      width: 350px;
+      height: 260px;
       border-radius: 15px 15px 0 0;
+    }
+    &__card-img {
+      width: 100%;
+      height: 180px;
+      position: relative;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+      }
+    }
+    &__card-text {
+      background: $color-tertiary;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      color: rgb(23, 104, 56);
+    }
+
+    &__information {
+      background: white;
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 15px 15px;
       box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
     }
-  }
-  &__card-text {
-    background: rgb(105, 238, 160);
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 5px 10px;
-    color: rgb(23, 104, 56);
-  }
 
-  &__information {
-    background: white;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
-  }
-
-  &__information-block {
-    margin-left: 20px;
-    & > :first-child {
-      font-weight: 800;
+    &__information-block {
+      margin-left: 20px;
+      & > :first-child {
+        font-weight: 800;
+      }
     }
-  }
-  &__heart {
-    font-size: 25px;
-    margin-right: 20px;
+    &__heart {
+      font-size: 25px;
+      margin-right: 20px;
+    }
   }
 }
 
@@ -222,4 +218,49 @@ body {
 
 /****Media Queries Desktop****/
 @media screen and (min-width: 768px) {
+  .discover {
+    &__button {
+      @include flexbox-center;
+      flex-direction: row;
+    }
+  }
+
+  .instruction {
+    &__phases {
+      @include flexbox-center;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+  .restaurants {
+    margin-bottom: 100px;
+    .restaurant {
+      &__cards {
+        @include flexbox-center;
+        flex-direction: row;
+      }
+      &__card {
+        margin: 0 20px 0 70px;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+  .footer {
+    height: 150px;
+    &__logo {
+      display: flex;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+    &__contacts {
+      display: flex;
+      justify-content: space-around;
+      font-size: 20px;
+    }
+    &__contacts i {
+      font-size: 20px;
+    }
+  }
 }
