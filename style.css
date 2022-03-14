@@ -43,6 +43,10 @@ body {
 .discover__container {
   padding: 20px;
   height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .discover__title {
   margin: 0px;
@@ -58,10 +62,13 @@ body {
   background: #ff79da;
   color: white;
   border-radius: 40px 40px 40px 40px;
-  padding: 3px 0px 1px 34px;
-  box-shadow: rgba(0, 0, 0, 0.082) 0px 4px 0px 0px;
+  padding: 3px 34px 1px 34px;
+  box-shadow: #3535351a 2px 2px 2px 2px;
   margin: 0 34px 0 49px;
   font-size: large;
+}
+.discover__button > p {
+  text-align: center;
 }
 
 .instruction {
@@ -83,6 +90,7 @@ body {
   height: 65px;
   margin: 7px 30px;
   border-radius: 20px;
+  box-shadow: #3535351a 2px 2px 2px 2px;
 }
 .instruction__phase:hover {
   background: #ff79d923;
@@ -124,6 +132,7 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
+  width: 100%;
 }
 .restaurants .restaurant__card {
   margin: 15px 0 0 0;
@@ -222,7 +231,7 @@ body {
     flex-direction: row;
   }
   .restaurants .restaurant__card {
-    margin: 0 20px 0 70px;
+    margin: 0 0 0 70px;
     width: auto;
     height: auto;
   }
@@ -240,6 +249,10 @@ body {
     display: flex;
     justify-content: space-around;
     font-size: 20px;
+  }
+  .footer__contacts > a {
+    color: white;
+    /*ne fonctionne pas*/
   }
   .footer__contacts i {
     font-size: 20px;
