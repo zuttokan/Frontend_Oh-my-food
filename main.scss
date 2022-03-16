@@ -269,13 +269,8 @@ body {
   &__contacts i {
     font-size: 12px;
     margin-right: 10px;
-    & > a {
-      color: white !important; /*ne fonctionne pas*/
-    }
   }
 }
-
-/****Media Queries Tablet****/
 
 /****Media Queries Desktop****/
 @media screen and (min-width: 768px) {
@@ -292,6 +287,10 @@ body {
   }
 
   .instruction {
+    &__title {
+      display: flex;
+      justify-content: center;
+    }
     &__phases {
       @include flexbox-center;
       flex-direction: row;
@@ -300,10 +299,15 @@ body {
   }
   .restaurants {
     margin-bottom: 100px;
+    &__title {
+      display: flex;
+      justify-content: center;
+    }
     .restaurant {
       &__cards {
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
         flex-direction: row;
       }
       &__card {

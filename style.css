@@ -246,12 +246,7 @@ body {
   font-size: 12px;
   margin-right: 10px;
 }
-.footer__contacts i > a {
-  color: white !important;
-  /*ne fonctionne pas*/
-}
 
-/****Media Queries Tablet****/
 /****Media Queries Desktop****/
 @media screen and (min-width: 768px) {
   body {
@@ -267,6 +262,10 @@ body {
     flex-direction: row;
   }
 
+  .instruction__title {
+    display: flex;
+    justify-content: center;
+  }
   .instruction__phases {
     display: flex;
     justify-content: center;
@@ -278,9 +277,14 @@ body {
   .restaurants {
     margin-bottom: 100px;
   }
-  .restaurants .restaurant__cards {
+  .restaurants__title {
     display: flex;
     justify-content: center;
+  }
+  .restaurants .restaurant__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     flex-direction: row;
   }
   .restaurants .restaurant__card {
