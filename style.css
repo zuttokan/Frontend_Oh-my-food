@@ -194,9 +194,34 @@ body {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
+.restaurants .restaurant__heart i {
+  border-radius: 25px;
+  background-color: white;
+  font-size: 25px !important;
+  padding: -10px -25px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
 .restaurants .restaurant__heart i:hover {
-  -webkit-text-fill-color: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
-  /*ne fonctionne pas*/
+  border-radius: 25px;
+}
+.restaurants .restaurant__heart i:hover::after {
+  border-radius: 25px;
+  opacity: 1;
+}
+.restaurants .restaurant__heart i::after {
+  border-radius: 25px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 550ms;
 }
 
 .footer {
