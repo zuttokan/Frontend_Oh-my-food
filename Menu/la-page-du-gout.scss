@@ -1,0 +1,216 @@
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin button-hover-light {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.657);
+}
+
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-gradient: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+$color-background: #f0ecec;
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background: $color-background;
+}
+* a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.page__header {
+  @include flexbox-center;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  .header__logo {
+    font-family: "Shrikhand", cursive;
+    color: black;
+    width: 200px;
+    margin-top: 30px;
+  }
+}
+.menu {
+  width: 100%;
+  &__card {
+    @include flexbox-center;
+    flex-direction: column;
+    width: 100%;
+    height: 360px;
+  }
+  &__card_img {
+    width: 100%;
+    height: 90%;
+    position: relative;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__information {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px 50px 0 0;
+    transform: translateY(130%);
+    background-color: $color-background;
+  }
+
+  &__information-block {
+    color: #000505;
+    margin-left: 20px;
+    font-family: shrikhand;
+    font-size: 30px;
+  }
+  &__heart i {
+    font-size: 25px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.food {
+  margin-top: 20px;
+  background: $color-background;
+
+  &__title {
+    padding-left: 5%;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: $color-tertiary;
+      width: 60px;
+      height: 4px;
+      left: 20px;
+      bottom: -8px;
+    }
+  }
+
+  &__cards {
+    @include flexbox-center;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__card {
+    width: 95%;
+    margin-bottom: 15px;
+  }
+
+  &__information {
+    background: white;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  &__information-block {
+    color: #000505;
+    margin-left: 10px;
+    & > :first-child {
+      font-weight: 800;
+      font-size: large;
+      margin-bottom: 5px;
+    }
+  }
+  &__price {
+    font-weight: 800;
+    font-size: 15px;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #353535;
+  color: white;
+
+  &__logo {
+    font-family: "Shrikhand";
+    font-size: 20px;
+    color: white;
+    margin: 0 0 20px 40px;
+    padding: 20px 0 0 0;
+  }
+
+  &__contacts {
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 12px;
+  }
+  &__contacts i {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
+
+/****Media Queries Desktop****/
+@media screen and (min-width: 768px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1700px;
+  }
+
+  .restaurants {
+    margin-bottom: 100px;
+    &__title {
+      display: flex;
+      justify-content: center;
+    }
+    .restaurant {
+      &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+      &__card {
+        margin-left: 20px;
+      }
+    }
+  }
+  .footer {
+    height: 150px;
+    &__logo {
+      display: flex;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+    &__contacts {
+      display: flex;
+      justify-content: space-around;
+      font-size: 20px;
+    }
+    &__contacts i {
+      font-size: 20px;
+    }
+  }
+}

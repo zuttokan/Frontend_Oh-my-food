@@ -1,0 +1,199 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background: #f0ecec;
+}
+
+* a {
+  text-decoration: none;
+  color: white;
+}
+
+.page__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+}
+.page__header .header__logo {
+  font-family: "Shrikhand", cursive;
+  color: black;
+  width: 200px;
+  margin-top: 30px;
+}
+
+.menu {
+  width: 100%;
+}
+.menu__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 360px;
+}
+.menu__card_img {
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+.menu__card_img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu__information {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px 50px 0 0;
+  transform: translateY(130%);
+  background-color: #f0ecec;
+}
+.menu__information-block {
+  color: #000505;
+  margin-left: 20px;
+  font-family: shrikhand;
+  font-size: 30px;
+}
+.menu__heart i {
+  font-size: 25px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.menu__heart i:hover {
+  background-image: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.food {
+  margin-top: 20px;
+  background: #f0ecec;
+}
+.food__title {
+  padding-left: 5%;
+  position: relative;
+}
+.food__title::after {
+  content: "";
+  position: absolute;
+  background: #99e2d0;
+  width: 60px;
+  height: 4px;
+  left: 20px;
+  bottom: -8px;
+}
+.food__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.food__card {
+  width: 95%;
+  margin-bottom: 15px;
+}
+.food__information {
+  background: white;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+.food__information-block {
+  color: #000505;
+  margin-left: 10px;
+}
+.food__information-block > :first-child {
+  font-weight: 800;
+  font-size: large;
+  margin-bottom: 5px;
+}
+.food__price {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #353535;
+  color: white;
+}
+.footer__logo {
+  font-family: "Shrikhand";
+  font-size: 20px;
+  color: white;
+  margin: 0 0 20px 40px;
+  padding: 20px 0 0 0;
+}
+.footer__contacts {
+  list-style-type: none;
+  font-size: 15px;
+  line-height: 12px;
+}
+.footer__contacts i {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+/****Media Queries Desktop****/
+@media screen and (min-width: 768px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1700px;
+  }
+
+  .restaurants {
+    margin-bottom: 100px;
+  }
+  .restaurants__title {
+    display: flex;
+    justify-content: center;
+  }
+  .restaurants .restaurant__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .restaurants .restaurant__card {
+    margin-left: 20px;
+  }
+
+  .footer {
+    height: 150px;
+  }
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .footer__contacts {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+  .footer__contacts i {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=la-page-du-gout.css.map */
