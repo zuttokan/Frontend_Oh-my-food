@@ -19,7 +19,7 @@ $color-background: #f0ecec;
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  background: $color-background;
+  background: white;
 }
 * a {
   text-decoration: none;
@@ -39,6 +39,7 @@ body {
 }
 .menu {
   width: 100%;
+
   &__card {
     @include flexbox-center;
     flex-direction: column;
@@ -69,10 +70,9 @@ body {
   }
 
   &__information-block {
-    color: #000505;
     margin-left: 20px;
     font-family: shrikhand;
-    font-size: 30px;
+    font-size: 20px;
   }
   &__heart i {
     font-size: 25px;
@@ -92,10 +92,10 @@ body {
 }
 
 .food {
-  margin-top: 20px;
+  margin-top: -20px;
   background: $color-background;
-
   &__title {
+    font-weight: normal;
     padding-left: 5%;
     position: relative;
     &::after {
@@ -104,7 +104,7 @@ body {
       background: $color-tertiary;
       width: 60px;
       height: 4px;
-      left: 20px;
+      left: 5%;
       bottom: -8px;
     }
   }
@@ -131,7 +131,6 @@ body {
   }
 
   &__information-block {
-    color: #000505;
     margin-left: 10px;
     & > :first-child {
       font-weight: 800;
@@ -142,6 +141,24 @@ body {
   &__price {
     font-weight: 800;
     font-size: 15px;
+  }
+  &__button {
+    background: $color-gradient;
+    color: white;
+    border-radius: 40px 40px 40px 40px;
+    padding: 3px 34px 1px 34px;
+    box-shadow: #3535351a 2px 2px 2px 2px;
+    margin: auto;
+    font-size: large;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 150px;
+    & > p {
+      text-align: center;
+    }
+    &:hover {
+      @include button-hover-light;
+    }
   }
 }
 
@@ -177,23 +194,36 @@ body {
     margin-right: auto;
     max-width: 1700px;
   }
-
-  .restaurants {
-    margin-bottom: 100px;
-    &__title {
-      display: flex;
-      justify-content: center;
+  .menu {
+    &__card {
+      height: 500px;
     }
-    .restaurant {
-      &__cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        flex-direction: row;
-      }
-      &__card {
-        margin-left: 20px;
-      }
+    &__information {
+      width: 100%;
+      transform: translateY(180%);
+      max-width: 1700px;
+    }
+    &__heart i {
+      font-size: 40px;
+    }
+  }
+  .food {
+    &__title {
+      font-weight: normal;
+    }
+    &__cards {
+      width: 100%;
+      @include flexbox-center;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-right: 50px;
+      margin-bottom: 50px;
+    }
+    &__card {
+      max-width: 400px;
+    }
+    &__button {
+      width: 200px;
     }
   }
   .footer {

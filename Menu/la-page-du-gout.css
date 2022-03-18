@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  background: #f0ecec;
+  background: white;
 }
 
 * a {
@@ -57,10 +57,9 @@ body {
   background-color: #f0ecec;
 }
 .menu__information-block {
-  color: #000505;
   margin-left: 20px;
   font-family: shrikhand;
-  font-size: 30px;
+  font-size: 20px;
 }
 .menu__heart i {
   font-size: 25px;
@@ -78,10 +77,11 @@ body {
 }
 
 .food {
-  margin-top: 20px;
+  margin-top: -20px;
   background: #f0ecec;
 }
 .food__title {
+  font-weight: normal;
   padding-left: 5%;
   position: relative;
 }
@@ -91,7 +91,7 @@ body {
   background: #99e2d0;
   width: 60px;
   height: 4px;
-  left: 20px;
+  left: 5%;
   bottom: -8px;
 }
 .food__cards {
@@ -116,7 +116,6 @@ body {
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
 .food__information-block {
-  color: #000505;
   margin-left: 10px;
 }
 .food__information-block > :first-child {
@@ -127,6 +126,27 @@ body {
 .food__price {
   font-weight: 800;
   font-size: 15px;
+}
+.food__button {
+  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+  color: white;
+  border-radius: 40px 40px 40px 40px;
+  padding: 3px 34px 1px 34px;
+  box-shadow: #3535351a 2px 2px 2px 2px;
+  margin: auto;
+  font-size: large;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 150px;
+}
+.food__button > p {
+  text-align: center;
+}
+.food__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.657);
 }
 
 .footer {
@@ -160,21 +180,36 @@ body {
     max-width: 1700px;
   }
 
-  .restaurants {
-    margin-bottom: 100px;
+  .menu__card {
+    height: 500px;
   }
-  .restaurants__title {
+  .menu__information {
+    width: 100%;
+    transform: translateY(180%);
+    max-width: 1700px;
+  }
+  .menu__heart i {
+    font-size: 40px;
+  }
+
+  .food__title {
+    font-weight: normal;
+  }
+  .food__cards {
+    width: 100%;
     display: flex;
     justify-content: center;
-  }
-  .restaurants .restaurant__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
     flex-direction: row;
+    justify-content: space-around;
+    margin-right: 50px;
+    margin-bottom: 50px;
   }
-  .restaurants .restaurant__card {
-    margin-left: 20px;
+  .food__card {
+    max-width: 400px;
+  }
+  .food__button {
+    width: 200px;
   }
 
   .footer {
