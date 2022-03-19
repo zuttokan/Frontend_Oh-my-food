@@ -66,7 +66,7 @@ body {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  margin-right: 20px;
+  margin-right: 30px;
   cursor: pointer;
 }
 .menu__heart i:hover {
@@ -77,12 +77,13 @@ body {
 }
 
 .food {
-  margin-top: -20px;
+  padding-left: 10px;
+  padding-right: 10px;
   background: #f0ecec;
 }
 .food__title {
   font-weight: normal;
-  padding-left: 5%;
+  padding-left: 2%;
   position: relative;
 }
 .food__title::after {
@@ -91,7 +92,7 @@ body {
   background: #99e2d0;
   width: 60px;
   height: 4px;
-  left: 5%;
+  left: 2%;
   bottom: -8px;
 }
 .food__cards {
@@ -182,34 +183,37 @@ body {
 
   .menu__card {
     height: 500px;
+    margin: 0 0 -41px 0;
   }
   .menu__information {
     width: 100%;
     transform: translateY(180%);
     max-width: 1700px;
   }
+  .menu__information-block {
+    font-size: 25px;
+    margin-left: 80px;
+  }
   .menu__heart i {
     font-size: 40px;
+    margin-right: 100px;
   }
 
+  .food {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    border-spacing: 50px;
+  }
   .food__title {
     font-weight: normal;
   }
-  .food__cards {
-    width: 100%;
+  .food__container_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-right: 50px;
-    margin-bottom: 50px;
-  }
-  .food__card {
-    max-width: 400px;
   }
   .food__button {
-    width: 200px;
+    background-color: #353535;
   }
 
   .footer {

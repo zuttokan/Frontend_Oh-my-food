@@ -243,6 +243,7 @@ body {
   .instruction__title {
     display: flex;
     justify-content: center;
+    margin-right: 75px;
   }
   .instruction__phases {
     display: flex;
