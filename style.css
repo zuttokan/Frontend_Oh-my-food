@@ -42,7 +42,7 @@ body {
 }
 .discover__container {
   padding: 20px;
-  height: 250px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;

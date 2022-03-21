@@ -53,7 +53,7 @@ body {
   background: rgba(155, 149, 149, 0.075);
   &__container {
     padding: 20px;
-    height: 250px;
+    height: 150px;
     @include flexbox-center;
     flex-direction: column;
   }
