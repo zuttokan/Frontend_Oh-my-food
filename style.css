@@ -129,8 +129,8 @@ body {
 .restaurants {
   width: 100%;
   margin-top: 30px;
-  margin-bottom: 50px;
   padding-top: 30px;
+  padding-bottom: 50px;
   background: rgba(155, 149, 149, 0.075);
 }
 .restaurants__title {
@@ -200,6 +200,7 @@ body {
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0;
 }
 
 .footer {
@@ -240,6 +241,9 @@ body {
     flex-direction: row;
   }
 
+  .instruction {
+    margin-bottom: 50px;
+  }
   .instruction__title {
     display: flex;
     justify-content: center;
@@ -254,11 +258,12 @@ body {
   }
 
   .restaurants {
-    margin-bottom: 100px;
+    margin: auto;
   }
   .restaurants__title {
     display: flex;
     justify-content: center;
+    margin-right: 75px;
   }
   .restaurants .restaurant__cards {
     display: flex;
