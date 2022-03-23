@@ -75,20 +75,31 @@ body {
     font-size: 20px;
   }
   &__heart i {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
     font-size: 25px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    margin-right: 30px;
-    cursor: pointer;
-
-    &:hover {
-      background-image: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
-      background-size: 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke-width: 0;
+  }
+  &__heart_empty i {
+    opacity: 1;
+  }
+  &__heart_full i {
+    opacity: 0;
+    &__heart_empty i:hover {
+      opacity: 0;
     }
+  }
+  &__heart_full i:hover {
+    opacity: 1;
+    background-image: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0;
   }
 }
 
@@ -134,6 +145,10 @@ body {
 
   &__information-block {
     margin-left: 10px;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "…";
     & > :first-child {
       font-weight: 800;
       font-size: large;
@@ -141,9 +156,33 @@ body {
     }
   }
   &__price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
     font-weight: 800;
     font-size: 15px;
+    width: 20%;
+    height: 100%;
   }
+  &__price_euro {
+    margin-bottom: 18px;
+  }
+
+  &__price_check {
+    width: 100%;
+    height: 100%;
+    background: $color-tertiary;
+    border-radius: 0 15px 15px 0;
+  }
+  &__price_check i {
+    padding: 3px;
+    border-radius: 200px;
+    color: $color-tertiary;
+    background-color: white;
+    font-size: 3px;
+  }
+
   &__container_button {
     height: 100px;
   }
@@ -167,7 +206,7 @@ body {
   }
 }
 .command_button {
-  margin-top: -45px;
+  margin-top: -45px; /***Problemes de marges**/
   padding-top: 35px;
   padding-bottom: 35px;
 
@@ -222,8 +261,9 @@ body {
       margin-left: 80px;
     }
     &__heart i {
+      right: 50px;
+      bottom: 40px;
       font-size: 40px;
-      margin-right: 100px;
     }
   }
   .food {

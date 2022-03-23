@@ -42,7 +42,7 @@ body {
 }
 .discover__container {
   padding: 20px;
-  height: 150px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +128,7 @@ body {
 
 .restaurants {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
   padding-top: 30px;
   padding-bottom: 50px;
   background: rgba(155, 149, 149, 0.075);
@@ -187,17 +187,31 @@ body {
 .restaurants .restaurant__information-block > :first-child {
   font-weight: 800;
 }
-.restaurants .restaurant__heart i {
+.restaurants .restaurant__heart {
+  margin: 50px;
+  margin-top: 25px;
+}
+.restaurants .restaurant__heart_empty i, .restaurants .restaurant__heart_full i {
+  position: absolute;
   font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  margin-right: 20px;
-  cursor: pointer;
 }
-.restaurants .restaurant__heart i:hover {
+.restaurants .restaurant__heart_empty i {
+  opacity: 1;
+}
+.restaurants .restaurant__heart_full i {
+  opacity: 0;
+}
+.restaurants .restaurant__heart_full i__heart_empty i:hover {
+  opacity: 0;
+}
+.restaurants .restaurant__heart_full i:hover {
+  opacity: 1;
   background-image: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
-  background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0;
@@ -219,7 +233,7 @@ body {
 .footer__contacts {
   list-style-type: none;
   font-size: 15px;
-  line-height: 12px;
+  line-height: 25px;
 }
 .footer__contacts i {
   font-size: 12px;
@@ -234,7 +248,10 @@ body {
     max-width: 1700px;
   }
 
-  .discover__button {
+  .discover__container {
+    height: 200px;
+  }
+  .discover__container__button {
     display: flex;
     justify-content: center;
     align-items: center;
