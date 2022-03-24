@@ -133,54 +133,59 @@ body {
   }
 
   &__information {
-    background: white;
-    height: 80px;
-    width: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 15px 15px 15px 15px;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
-  }
-
-  &__information-block {
-    margin-left: 10px;
-    width: 80%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: "…";
-    & > :first-child {
-      font-weight: 800;
-      font-size: large;
-      margin-bottom: 5px;
+    width: 100%;
+    height: 70px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    &:hover .food__check {
+      @include flexbox-center;
+      animation: slide-left 0.5s ease;
+      transform-origin: right;
+    }
+    &:hover .food__information-price {
+      padding-right: 70px;
+      transition: 0.5s ease;
     }
   }
-  &__price {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-    font-weight: 800;
-    font-size: 15px;
-    width: 20%;
-    height: 100%;
-  }
-  &__price_euro {
-    margin-bottom: 18px;
-  }
-
-  &__price_check {
-    width: 100%;
-    height: 100%;
+  .food__check {
+    display: none;
+    position: absolute;
     background: $color-tertiary;
     border-radius: 0 15px 15px 0;
+    right: 0px;
+    padding: 0 13px;
+    height: 100%;
+    i {
+      font-size: 30px;
+      color: white;
+      transform: rotate(180deg);
+      animation: rotate 0.5s both;
+    }
   }
-  &__price_check i {
-    padding: 3px;
-    border-radius: 200px;
-    color: $color-tertiary;
-    background-color: white;
-    font-size: 3px;
+  &__information-block {
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    & p {
+      margin: 5px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .food__information-name {
+      font-weight: bold;
+    }
+  }
+  &__information-price {
+    font-weight: bold;
+    padding: 20px 15px 0 0;
   }
 
   &__container_button {
@@ -205,6 +210,25 @@ body {
     }
   }
 }
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.food__animation_card_1 {
+  animation: opacity 1s;
+}
+.food__animation_card_2 {
+  animation: opacity 2s;
+}
+.food__animation_card_3 {
+  animation: opacity 3s;
+}
+
 .command_button {
   margin-top: -45px; /***Problemes de marges**/
   padding-top: 35px;
@@ -255,10 +279,6 @@ body {
       width: 100%;
       transform: translateY(180%);
       max-width: 1700px;
-    }
-    &__information-block {
-      font-size: 25px;
-      margin-left: 80px;
     }
     &__heart i {
       right: 50px;
