@@ -132,33 +132,42 @@ body {
   background-color: white;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
+.food__information:hover .food__information-price {
+  padding-right: 35px;
+  transition: 0.5s ease;
+}
 .food__information:hover .food__check {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: slide-left 0.5s ease;
-  transform-origin: right;
-}
-.food__information:hover .food__information-price {
-  padding-right: 70px;
+  padding-right: 35px;
   transition: 0.5s ease;
+  transform: scaleX(1);
 }
-.food .food__check {
-  display: none;
-  position: absolute;
+.food__information:hover .food__check i {
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transform: rotate(360deg);
+}
+.food__information .food__check {
+  transform: scaleX(0);
+  transform-origin: right;
   background: #99e2d0;
+  color: #ffffff;
   border-radius: 0 15px 15px 0;
-  right: 0px;
-  padding: 0 13px;
   height: 100%;
+  padding: 0 30px;
 }
-.food .food__check i {
-  font-size: 30px;
-  color: white;
-  transform: rotate(180deg);
-  animation: rotate 0.5s both;
+.food__information .food__check i {
+  position: absolute;
+  color: #99e2d0;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: white;
 }
 .food__information-block {
+  width: 80%;
   margin-left: 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -174,6 +183,7 @@ body {
 .food__information-price {
   font-weight: bold;
   padding: 20px 15px 0 0;
+  width: 5px;
 }
 .food__container_button {
   height: 100px;
@@ -254,7 +264,7 @@ body {
 }
 
 /****Media Queries Desktop****/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1100px) {
   body {
     margin-left: auto;
     margin-right: auto;
@@ -268,7 +278,6 @@ body {
   .menu__information {
     width: 100%;
     transform: translateY(180%);
-    max-width: 1700px;
   }
   .menu__heart i {
     right: 50px;
@@ -279,9 +288,6 @@ body {
   .food {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  }
-  .food__title {
-    font-weight: normal;
   }
 
   .footer {

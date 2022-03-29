@@ -144,32 +144,43 @@ body {
     border-radius: 15px;
     background-color: white;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
-    &:hover .food__check {
-      @include flexbox-center;
-      animation: slide-left 0.5s ease;
-      transform-origin: right;
-    }
     &:hover .food__information-price {
-      padding-right: 70px;
+      padding-right: 35px;
       transition: 0.5s ease;
     }
-  }
-  .food__check {
-    display: none;
-    position: absolute;
-    background: $color-tertiary;
-    border-radius: 0 15px 15px 0;
-    right: 0px;
-    padding: 0 13px;
-    height: 100%;
-    i {
-      font-size: 30px;
-      color: white;
-      transform: rotate(180deg);
-      animation: rotate 0.5s both;
+    &:hover .food__check {
+      @include flexbox-center;
+      padding-right: 35px;
+      transition: 0.5s ease;
+      transform: scaleX(1);
+      i {
+        transition-duration: 0.5s;
+        transition-property: transform;
+        transform: rotate(360deg);
+      }
+    }
+    .food__check {
+      transform: scaleX(0);
+      transform-origin: right;
+      background: $color-tertiary;
+      color: #ffffff;
+      border-radius: 0 15px 15px 0;
+      height: 100%;
+      padding: 0 30px;
+
+      i {
+        position: absolute;
+        color: $color-tertiary;
+        font-size: 20px;
+        border-radius: 50%;
+        padding: 5px;
+        background-color: white;
+      }
     }
   }
+
   &__information-block {
+    width: 80%;
     margin-left: 10px;
     white-space: nowrap;
     overflow: hidden;
@@ -186,6 +197,7 @@ body {
   &__information-price {
     font-weight: bold;
     padding: 20px 15px 0 0;
+    width: 5px;
   }
 
   &__container_button {
@@ -264,7 +276,7 @@ body {
 }
 
 /****Media Queries Desktop****/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1100px) {
   body {
     margin-left: auto;
     margin-right: auto;
@@ -278,7 +290,6 @@ body {
     &__information {
       width: 100%;
       transform: translateY(180%);
-      max-width: 1700px;
     }
     &__heart i {
       right: 50px;
@@ -289,9 +300,6 @@ body {
   .food {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    &__title {
-      font-weight: normal;
-    }
   }
 
   .footer {
