@@ -181,6 +181,7 @@ body {
   flex-direction: column;
   border-radius: 15px;
   width: 100%;
+  transform-origin: top left;
 }
 .restaurants .restaurant__card {
   margin: 15px 0 0 0;

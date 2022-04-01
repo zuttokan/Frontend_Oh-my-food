@@ -45,6 +45,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 360px;
+    animation: top 0.5s linear;
   }
   &__card_img {
     width: 100%;
@@ -227,9 +228,11 @@ body {
 @keyframes opacity {
   0% {
     opacity: 0;
+    -ms-transform-origin-y: -15px;
   }
   100% {
     opacity: 1;
+    -ms-transform-origin-y: 0px;
   }
 }
 .food__animation_card_1 {
@@ -243,7 +246,7 @@ body {
 }
 
 .command_button {
-  margin-top: -45px; /***Problemes de marges**/
+  margin-top: -45px;
   padding-top: 35px;
   padding-bottom: 35px;
 
