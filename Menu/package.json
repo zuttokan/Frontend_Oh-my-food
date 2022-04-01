@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./la-page-du-gout.scss:./la-page-du-gout.css"
+    "sass": "sass --watch ./menu.scss:./menu.css"
   },
   "author": "",
   "license": "ISC"
