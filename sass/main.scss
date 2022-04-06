@@ -7,12 +7,13 @@
   cursor: pointer;
   opacity: 0.8;
   transition: 0.3s;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.657);
+  box-shadow: 0px 0px 20px 0px #9356dc;
 }
 
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$color-background: rgba(155, 149, 149, 0.075);
 $color-gradient: linear-gradient(
   360deg,
   $color-primary 0%,
@@ -38,19 +39,26 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(13, 13, 13, 0.869);
-  animation: loader 2s;
+  background: rgba(13, 13, 13, 0.982);
+  animation: loader 2.5s;
   visibility: hidden;
   & div {
     box-sizing: border-box;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border: 8px solid transparent;
     border-top-color: $color-secondary;
     border-radius: 50%;
-    animation: loaderspinner 2s;
+    animation: loaderspinner 2.5s;
     visibility: hidden;
+  }
+  & > h2 {
+    font-size: 23px;
+    font-family: "Shrikhand", cursive;
+    background: $color-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -60,16 +68,16 @@ body {
 .loader div:nth-child(3) {
   border: 1px solid transparent;
   border-bottom-color: $color-primary;
-  animation: loaderspinnertwo 2s;
+  animation: loaderspinnertwo 2.5s;
 }
 
-.page__header {
+.header {
   @include flexbox-center;
   height: 80px;
   width: 100%;
   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.034);
 
-  .header__logo {
+  &__logo {
     font-family: "Shrikhand", cursive;
     color: black;
     width: 200px;
@@ -89,7 +97,7 @@ body {
 
 .discover {
   width: 100%;
-  background: rgba(155, 149, 149, 0.075);
+  background: $color-background;
   &__container {
     padding: 20px;
     height: 250px;
@@ -184,7 +192,7 @@ body {
   margin-top: 20px;
   padding-top: 30px;
   padding-bottom: 50px;
-  background: rgba(155, 149, 149, 0.075);
+  background: $color-background;
 
   &__title {
     padding-left: 5%;
@@ -347,6 +355,15 @@ body {
 
 /****Media Queries Desktop****/
 @media screen and (min-width: 768px) {
+  .loader {
+    & div {
+      width: 300px;
+      height: 300px;
+    }
+    & > h2 {
+      font-size: 50px;
+    }
+  }
   body {
     margin-left: auto;
     margin-right: auto;

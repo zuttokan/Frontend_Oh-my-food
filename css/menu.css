@@ -9,19 +9,26 @@ body {
   color: white;
 }
 
-.page__header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 70px;
   width: 100%;
   background-color: white;
 }
-.page__header .header__logo {
+.header__logo {
   font-family: "Shrikhand", cursive;
   color: black;
   width: 200px;
   margin-top: 30px;
+  position: relative;
+}
+.header .header__back i {
+  position: absolute;
+  left: 8%;
+  font-size: 25px;
+  color: black;
 }
 
 .menu {
@@ -245,11 +252,11 @@ body {
 /****Keyframes****/
 @keyframes opacity {
   0% {
-    top: 4rem;
+    top: 20px;
     opacity: 0;
   }
   100% {
-    top: 0rem;
+    top: 0;
     opacity: 1;
   }
 }
@@ -290,6 +297,9 @@ body {
   .food {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+  .food__cards {
+    column-count: 3;
   }
 
   .footer {
