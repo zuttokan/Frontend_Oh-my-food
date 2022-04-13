@@ -148,15 +148,17 @@ body {
   justify-content: center;
   align-items: center;
   padding-right: 35px;
-  transition: 0.3s ease;
+  transition: 0.5s;
   transform: scaleX(1);
 }
 .food__information:hover .food__check i {
-  transition-duration: 0.5s;
   transition-property: transform;
+  transition-duration: 0.5s;
   transform: rotate(360deg);
 }
 .food__information .food__check {
+  transition-property: transform;
+  transition-duration: 0.5s;
   transform: scaleX(0);
   transform-origin: right;
   background: #99e2d0;
@@ -171,7 +173,10 @@ body {
   font-size: 20px;
   border-radius: 50%;
   padding: 5px;
+  top: 20px;
   background-color: white;
+  transition-property: transform;
+  transition-duration: 0.8s;
 }
 .food__information-block {
   width: 80%;
