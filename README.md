@@ -9,7 +9,7 @@
 
 ### Pour accéder à l'interface du site:
 
-- Ouvrir le navigateur a l'adresse https://zuttokan.github.io/Oh-my-food/
+https://zuttokan.github.io/Oh-my-food/
 
 ### Identité graphique:
 
