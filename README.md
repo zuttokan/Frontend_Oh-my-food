@@ -34,5 +34,4 @@ https://zuttokan.github.io/Oh-my-food/
 ![screencapture-ohmyfood_menu desktop](https://user-images.githubusercontent.com/100352779/196160377-336c67d3-c724-46eb-abe5-98195e8c08b3.jpg)
 
 ## Screen version Mobile
-
-![screencapture-127-0-0-1-5501-index-html-2022-10-17-11_39_10](https://user-images.githubusercontent.com/100352779/196160435-93d5cb0a-6a89-4c9f-9be7-e0d543a2639e.png)
+![screencapture-127-0-0-1-5501-index-html-2022-10-17-11_39_10](https://user-images.githubusercontent.com/100352779/196463261-5fa22ec3-7343-4fe9-8384-0b6652f9844a.jpg)
