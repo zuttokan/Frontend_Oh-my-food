@@ -10,7 +10,7 @@
 
 ### Pour accéder à l'interface du site:
 
-https://zuttokan.github.io/Oh-my-food/
+https://zuttokan.github.io/P3_Oh-my-food/
 
 ### Compétences évaluées
 - Mettre en œuvre des effets CSS graphiques avancés
